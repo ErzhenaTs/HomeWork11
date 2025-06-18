@@ -15,7 +15,7 @@ public class Main {
     }
     //задача 2
    public static void checkVersionForTwo(int clientOSForTsk2, int clientDeviceYear) {
-       int currentYear = LocalDate.now().getYear();
+       /*int currentYear = LocalDate.now().getYear();
        if (clientOSForTsk2 == 0 && clientDeviceYear < currentYear) {
            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
        } else if (clientOSForTsk2 == 0) {
@@ -23,6 +23,18 @@ public class Main {
        } else if (clientOSForTsk2 == 1 && clientDeviceYear < currentYear) {
            System.out.println("Установите облегченную версию приложения для Android по ссылке");
        } else if (clientOSForTsk2 == 1) {
+           System.out.println("Установите версию приложения для Android по ссылке");
+       }
+   }*/
+       //int clientOSForTsk2 = 0;
+       //int clientDeviceYear = 2015;
+       if (clientOSForTsk2 == 0 && clientDeviceYear < 2015) {
+           System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+       } else if (clientOSForTsk2 == 0 && clientDeviceYear >= 2015) {
+           System.out.println("Установите версию приложения для iOS по ссылке");
+       } else if (clientOSForTsk2 == 1 && clientDeviceYear < 2015) {
+           System.out.println("Установите облегченную версию приложения для Android по ссылке");
+       } else {
            System.out.println("Установите версию приложения для Android по ссылке");
        }
    }
@@ -44,7 +56,7 @@ public class Main {
             System.out.println("Задача 1");
             checkYear(2021);
             System.out.println("Задача 2");
-            checkVersionForTwo(0,2025);
+            checkVersionForTwo(0,2021);
             System.out.println("Задача 3");
             System.out.println(deliveryDaysInfo(95));
         }
